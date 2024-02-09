@@ -443,7 +443,7 @@ static int hci_init2_req(struct hci_request *req, unsigned long opt)
 	 * the driver can quirk the behavior and skip reading the local
 	 * supported commands.
 	 */
-	if (hdev->hci_ver > BLUETOOTH_VER_1_1 &&
+	if (hdev->manufacturer != 11 && hdev->manufacturer != 31 && hdev->hci_ver > BLUETOOTH_VER_1_1 &&
 	    !test_bit(HCI_QUIRK_BROKEN_LOCAL_COMMANDS, &hdev->quirks))
 		hci_req_add(req, HCI_OP_READ_LOCAL_COMMANDS, 0, NULL);
 
