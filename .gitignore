@@ -124,4 +124,6 @@ kernel/configs/android-*.cfg
 #
 Android.bp
 
-kali-nethunter-kernel/
+
+kali-nethunter-kernel/output
+kali-nethunter-kernel/out
